@@ -1,0 +1,66 @@
+/* Utilidades de Texto y Color */
+.text-purple { color: var(--purple-accent); }
+.text-purple-light { color: var(--purple-light); }
+.text-muted-purple { color: var(--purple-muted); }
+.bg-purple { background-color: var(--purple-primary); }
+.micro-label { font-size: 0.68rem; font-weight: bold; letter-spacing: 0.5px; }
+.small-val { font-size: 0.75rem; color: var(--purple-text-light); font-family: monospace; }
+
+/* Selectores Custom */
+.custom-select {
+    background-color: var(--bg-select);
+    color: var(--text-main);
+    border: 1px solid var(--purple-dark);
+}
+
+/* Sliders de los Osciladores */
+.custom-slider::-webkit-slider-runnable-track { background: var(--bg-select); height: 5px; border-radius: 2px; }
+.custom-slider::-webkit-slider-thumb { background: var(--purple-primary); box-shadow: 0 0 6px var(--purple-primary); margin-top: -5px; height: 14px; width: 14px; }
+
+/* Switches de Encendido */
+.custom-switch .form-check-input { background-color: #16162a; border-color: var(--purple-dark); height: 20px; width: 40px; }
+.custom-switch .form-check-input:checked { background-color: var(--purple-primary); border-color: var(--purple-light); }
+
+/* Botones de Filtro (Bajos, Medios, Altos) */
+.btn-filter {
+    background-color: var(--bg-select);
+    color: var(--purple-muted);
+    border: 1px solid var(--purple-dark);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+.btn-filter:hover { background-color: #1a1a35; color: var(--purple-light); }
+.btn-filter.active {
+    background-color: var(--purple-primary);
+    color: #fff;
+    border-color: var(--purple-light);
+    box-shadow: 0 0 10px rgba(124, 77, 255, 0.4);
+}
+
+/* Interruptor ON/BYPASS de los Filtros */
+.filter-toggle {
+    background-color: #2a1111;
+    color: #ff5555;
+    border: 1px solid #551111;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.filter-toggle.active {
+    background-color: #112a11;
+    color: #55ff55;
+    border: 1px solid #115511;
+    box-shadow: 0 0 8px rgba(85, 255, 85, 0.4);
+}
+
+/* Sliders del ADSR (Estilo Knob) */
+.knob-slider {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 80%;
+    margin: 5px auto;
+}
+.knob-slider::-webkit-slider-runnable-track { background: linear-gradient(to right, var(--purple-primary), var(--bg-select)); height: 8px; border-radius: 4px; }
+.knob-slider::-webkit-slider-thumb { background: #fff; border: 2px solid var(--purple-primary); height: 18px; width: 18px; border-radius: 50%; cursor: pointer; -webkit-appearance: none; margin-top: -5px; box-shadow: 0 0 6px var(--purple-primary); }

@@ -1,0 +1,70 @@
+.piano-wrapper { 
+    background-color: var(--bg-dark-synth); 
+    border: 1px solid var(--bg-select); 
+    overflow-x: auto; 
+}
+
+.piano-keys { 
+    position: relative; 
+    padding: 15px 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.piano-keys .key { 
+    cursor: pointer; 
+    user-select: none; 
+    position: relative; 
+    text-transform: uppercase; 
+    list-style: none; 
+    transition: all 0.08s ease; 
+}
+
+/* Teclas Blancas */
+.piano-keys .white { 
+    height: 180px; 
+    width: 42px; 
+    border-radius: 0 0 4px 4px; 
+    border: 1px solid var(--bg-select); 
+    background: linear-gradient(to bottom, #0d0d1a 0%, #14142b 100%); 
+    margin: 0 1px; 
+    z-index: 1; 
+}
+.piano-keys .white.active { 
+    background: linear-gradient(to bottom, #231145 0%, var(--purple-primary) 100%); 
+    border-color: var(--purple-light); 
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.6); 
+}
+
+/* Teclas Negras */
+.piano-keys .black { 
+    z-index: 2; 
+    width: 24px; 
+    height: 110px; 
+    margin-left: -12px; 
+    margin-right: -12px; 
+    border-radius: 0 0 3px 3px; 
+    background: linear-gradient(to bottom, #020205, #0a0a12); 
+    border: 1px solid #3c1e70; 
+}
+.piano-keys .black.active { 
+    background: linear-gradient(to bottom, #14042b, var(--purple-accent)); 
+    border-color: var(--purple-text-light); 
+    box-shadow: 0 0 12px rgba(157, 78, 221, 0.7); 
+}
+
+/* Etiquetas de las notas (C3, D#3, etc.) */
+.piano-keys .key span { 
+    position: absolute; 
+    bottom: 10px; 
+    width: 100%; 
+    left: 0; 
+    color: #4e3575; 
+    font-size: 0.65rem; 
+    font-weight: 600; 
+    text-align: center; 
+}
+.piano-keys .black span { 
+    color: var(--purple-primary); 
+    bottom: 8px; 
+}
